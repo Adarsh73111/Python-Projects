@@ -6,8 +6,8 @@ FLIGHT_ENDPOINT = "https://test.api.amadeus.com/v2/shopping/flight-offers"
 
 class FlightSearch:
     def __init__(self):
-        self._api_key = "1PKe5rG6LXV7F5aM5yDl57f59N417fK3"
-        self._api_secret = "uRqUlAEv4vjlQL3y"
+        self._api_key = "MY_API_KEY"
+        self._api_secret = "MY_API_SECRET_KEY"
         self._token = self._get_new_token()
 
     def _get_new_token(self):
