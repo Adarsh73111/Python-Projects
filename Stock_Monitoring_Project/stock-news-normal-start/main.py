@@ -3,10 +3,10 @@ import requests
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-STOCK_ENDPOINT = "https://www.alphavantage.co/query"
-NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-STOCK_API_KEY = "9UGTUIG4WZKAJJN4"
-NEWS_API_KEY = "e1086d1e3a444a71924d4427c73329d4"
+STOCK_ENDPOINT = ""
+NEWS_ENDPOINT = ""
+STOCK_API_KEY = ""
+NEWS_API_KEY = ""
 
 stock_params = {
     "function": "TIME_SERIES_DAILY",
