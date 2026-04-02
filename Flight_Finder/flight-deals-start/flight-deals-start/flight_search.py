@@ -1,13 +1,13 @@
 import requests
 
-TOKEN_ENDPOINT = "https://test.api.amadeus.com/v1/security/oauth2/token"
-IATA_ENDPOINT = "https://test.api.amadeus.com/v1/reference-data/locations/cities"
-FLIGHT_ENDPOINT = "https://test.api.amadeus.com/v2/shopping/flight-offers"
+TOKEN_ENDPOINT = "YOURS_ENDPOIN6_API"
+IATA_ENDPOINT = "YOURS_IATA_ENDPOINT"
+FLIGHT_ENDPOINT = "YOURS_FLIGHT_ENDPOINT_API"
 
 class FlightSearch:
     def __init__(self):
-        self._api_key = "1PKe5rG6LXV7F5aM5yDl57f59N417fK3"
-        self._api_secret = "uRqUlAEv4vjlQL3y"
+        self._api_key = ""
+        self._api_secret = ""
         self._token = self._get_new_token()
 
     def _get_new_token(self):
