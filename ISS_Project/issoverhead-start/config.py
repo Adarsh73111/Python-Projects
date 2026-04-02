@@ -7,7 +7,7 @@ from datetime import datetime, timezone, timedelta
 
 MY_LAT = 30.35433
 MY_LONG = 76.36973
-MY_EMAIL = "workonprojects24@gmail.com"
+MY_EMAIL = ""
 MY_PASSWORD = ""
 RADAR_RANGE_KM = 500
 
