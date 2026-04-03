@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Jinja Blog</title>
+    <style> body { font-family: sans-serif; max-width: 800px; margin: auto; } </style>
+</head>
+<body>
+    <h1>Welcome to the Blog Capstone</h1>
+
+    {% for post in posts %}
+
+        <h2>{{ post["title"] }}</h2>
+        <p>{{ post["body"][:100] }}...</p> <a href="{{ url_for('show_post', post_id=post['id']) }}">Read More</a>
+        <hr>
+
+    {% endfor %} </body>
+</html>

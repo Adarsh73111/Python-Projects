@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post["title"] }}</title>
+    <style> body { font-family: sans-serif; max-width: 800px; margin: auto; } </style>
+</head>
+<body>
+
+    <h1>{{ post["title"] }}</h1>
+    <p>{{ post["body"] }}</p>
+
+    <br>
+    <a href="{{ url_for('home') }}">⬅ Go Back to Home</a>
+
+</body>
+</html>
