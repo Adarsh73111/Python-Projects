@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to the Secrets App</h1>
+        <p class="lead">Are you ready to discover the secret?</p>
+        <a class="btn btn-primary btn-lg mt-4" href="{{ url_for('login') }}" role="button">Login Here</a>
+    </div>
+{% endblock %}
