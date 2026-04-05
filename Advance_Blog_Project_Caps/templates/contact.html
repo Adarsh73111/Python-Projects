@@ -3,21 +3,26 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-8">
-            <h1 class="fw-bold mb-4">Contact Me</h1>
-            <p class="lead mb-4">Have a question about my hardware projects or want to collaborate on a Python backend? Send me a message below!</p>
 
-            <form>
+            {% if msg_sent %}
+                <h1 class="fw-bold mb-4 text-success">Successfully sent your message!</h1>
+            {% else %}
+                <h1 class="fw-bold mb-4">Contact Me</h1>
+                <p class="lead mb-4">Have a question about my hardware projects or want to collaborate on a Python backend? Send me a message below!</p>
+            {% endif %}
+
+            <form action="{{ url_for('contact') }}" method="POST">
                 <div class="mb-3">
                     <label for="nameInput" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                    <input type="text" class="form-control" id="nameInput" name="name" placeholder="Enter your name" required>
                 </div>
                 <div class="mb-3">
                     <label for="emailInput" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="emailInput" name="email" placeholder="name@example.com" required>
                 </div>
                 <div class="mb-3">
                     <label for="messageInput" class="form-label">Message</label>
-                    <textarea class="form-control" id="messageInput" rows="5" placeholder="Type your message here..."></textarea>
+                    <textarea class="form-control" id="messageInput" name="message" rows="5" placeholder="Type your message here..." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary mt-2">Send Message</button>
             </form>
