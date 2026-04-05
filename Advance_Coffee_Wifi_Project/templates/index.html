@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Coffee & Wifi{% endblock %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1 class="display-3 fw-bold">☕️ Coffee & Wifi 💻</h1>
+    <p class="lead mt-3">Find the best cafes to work from with reliable wifi and power outlets.</p>
+    <a href="{{ url_for('cafes') }}" class="btn btn-dark btn-lg mt-4">Show Me The Cafes!</a>
+</div>
+{% endblock %}
