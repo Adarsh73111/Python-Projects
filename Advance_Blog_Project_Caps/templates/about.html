@@ -1,0 +1,19 @@
+{% include "header.html" %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="fw-bold mb-4">About Me</h1>
+
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-4 shadow-sm" alt="Coding Setup">
+
+            <p class="lead">Hi, I'm Adarsh Misra.</p>
+            <p>I am a 3rd-year B.E. student majoring in Electronics (VLSI Design & Technology). I am passionate about bridging the gap between hardware and software.</p>
+            <p>When I'm not designing ASICs, working with FPGAs, or building backend web architectures in Python and AWS, you can usually find me solving a Rubik's cube or playing a game of chess.</p>
+
+            <a href="{{ url_for('home') }}" class="btn btn-primary mt-3">Back to Blog</a>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}

@@ -1,0 +1,20 @@
+{% include "header.html" %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="fw-bold mb-3">{{ post['title']|title }}</h1>
+            <p class="text-muted mb-4">Posted by Adarsh Admin</p>
+
+            <div class="alert alert-secondary fs-5" role="alert">
+                {{ post['body'] }}
+            </div>
+
+            <div class="mt-5">
+                <a href="{{ url_for('home') }}" class="btn btn-dark">&larr; Go Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
