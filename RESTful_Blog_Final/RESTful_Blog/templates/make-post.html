@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+
+        {% if is_edit %}
+            <h1 class="mb-4">Edit Post</h1>
+        {% else %}
+            <h1 class="mb-4">New Post</h1>
+        {% endif %}
+
+        {{ ckeditor.load() }}
+
+        {{ render_form(form) }}
+
+    </div>
+</div>
+{% endblock %}
