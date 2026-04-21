@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">NASA Astronomy Picture of the Day</h1>
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+                <form method="POST" class="d-flex">
+                    <input type="date" name="date" class="form-control me-2" required>
+                    <button type="submit" class="btn btn-outline-info">Search by Date</button>
+                </form>
+            </div>
+        </div>
+
+        {% if apod_data %}
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card bg-secondary text-light shadow-lg border-0">
+                    {% if apod_data.media_type == 'image' %}
+                        <img src="{{ apod_data.url }}" class="card-img-top" alt="{{ apod_data.title }}">
+                    {% elif apod_data.media_type == 'video' %}
+                        <div class="ratio ratio-16x9">
+                            <iframe src="{{ apod_data.url }}" allowfullscreen></iframe>
+                        </div>
+                    {% endif %}
+
+                    <div class="card-body p-4">
+                        <h3 class="card-title fw-bold">{{ apod_data.title }}</h3>
+                        <p class="text-info fw-semibold">{{ apod_data.date }}</p>
+                        <p class="card-text" style="line-height: 1.8;">{{ apod_data.explanation }}</p>
+                        {% if apod_data.copyright %}
+                            <p class="text-muted mt-3 mb-0"><small>Copyright: {{ apod_data.copyright }}</small></p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>
